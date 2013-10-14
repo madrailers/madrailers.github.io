@@ -1,0 +1,43 @@
+body { padding: 0 20px; }
+
+.loading {
+  text-align: center;
+  color: #444;
+}
+
+#events ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#events ul li {
+  border-bottom: 1px dotted #888;
+  margin-bottom: 10px;
+}
+
+#events ul li:last-child {
+  border-bottom: 0;
+}
+
+.event h3 {
+  margin-top: 0;
+}
+
+#videos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#videos ul li {
+  border-bottom: 1px dotted #888;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+#videos ul li:last-child {
+  border-bottom: 0;
+}
+
+.video .recorded_on {
+  float: right;
+}
