@@ -1,0 +1,33 @@
+$banner-height: 210px;
+$nav-width: 210px;
+
+.content-container {
+  background-color: #FDD5C3; 
+  padding: 20px;
+  @media #{$large-up} {
+    margin-top: -#{$banner-height};  
+  }    
+}
+
+.content-nav {
+  .content-logo {
+    height: $banner-height;
+    margin: 0 auto;
+  }   
+  margin-top: -#{$banner-height};   
+  .side-nav {
+    background-color: #FDD5C3; 
+    width: $nav-width;
+    margin: 10px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
+    @media #{$large-up} {
+      display: block;
+    }
+  } 
+  .sub-side-nav {
+    list-style-type: none;
+    padding-top: 5px;
+  }
+}
