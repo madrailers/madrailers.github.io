@@ -148,7 +148,7 @@ module.exports = function(grunt) {
   // Default task.
   // grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
   grunt.registerTask('default', ['copy', 'requirejs', 'clean:js', 'markdown', 'compass']);
-  grunt.registerTask('build', ['clean', 'copy', 'markdown', 'compass']);
+  grunt.registerTask('build', ['clean', 'copy', 'requirejs', 'clean:js', 'markdown', 'compass']);
   grunt.registerTask('deploy', ['gh-pages']);
   grunt.registerTask('autobuild', ['build', 'deploy']);
 };
