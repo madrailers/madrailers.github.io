@@ -1,7 +1,7 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  var repo_slug = 'madrailers/sample-app';
+  var repo_slug = 'madrailers/madrailers.github.io';
 
   // Project configuration.
   grunt.initConfig({
@@ -11,10 +11,10 @@ module.exports = function(grunt) {
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',    
+      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     requirejs: {
       compile: {
-        options: {       
+        options: {
           baseUrl: "./",
           appDir: "src/javascripts",
           dir: "dist/js",
@@ -76,6 +76,7 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'dist',
+        branch: 'master',
         repo: 'git@github.com:' + repo_slug + '.git'
       },
       src: ['**']
@@ -101,8 +102,8 @@ module.exports = function(grunt) {
     },
 
     compass: {
-      dist: {                   
-        options: {              
+      dist: {
+        options: {
           sassDir: 'src/stylesheets',
           cssDir: 'dist/css',
           outputStyle: 'compressed',
