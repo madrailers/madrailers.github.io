@@ -96,6 +96,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           {expand: true, cwd: 'src', src: ['index.html'], dest: 'dist/', filter: 'isFile'},
+          {expand: true, cwd: 'meetup-slides', src: ['**'], dest: 'dist/meetup-slides'},
           {expand: true, cwd: 'src/images', src: ['**'], dest: 'dist/img'}
         ]
       }
